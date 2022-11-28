@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,5 @@ Route::get('/cars', function () {
     $cars = DB::table('cars')->get();
     return view('cars', ['cars' => $cars]);
 });
+
+Route::get('/cars/{id}', [CarController::class, 'show'])->name('single-car');

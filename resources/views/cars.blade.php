@@ -13,7 +13,7 @@
             {{-- <li>{{$car->id}}</li>
             <li>{{$car->created_at}}</li>
             <li>{{$car->updated_at}}</li> --}}
-            <li>{{$car->title}}</li>
+            <a href="{{ route('single-car', ['id' => $car->id]) }}">{{ $car->title }}</a>
             <li>{{$car->producer}}</li>                 
             {{-- <li>{{$car->number_of_doors}}</li>  --}}
             </ul>
